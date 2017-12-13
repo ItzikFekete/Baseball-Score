@@ -260,20 +260,13 @@
             android:text="reset"
             android:textSize="16dp"
             android:id="@+id/reset" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="The winner is:"
-            android:layout_below="@+id/winner"
-            android:textSize="36dp"
-            android:textColor="@android:color/black"
-            android:id="@+id/whoWon" />
+
 
         <TextView
             android:id="@+id/Metz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/whoWon"
+            android:layout_below="@+id/winner"
             android:textSize="45sp"
             android:textColor="@android:color/holo_blue_dark"
             android:text="NYM"/>
