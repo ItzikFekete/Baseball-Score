@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.visualprecinct.baseballscore.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="18dp"
+            android:text="Team"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingTop="18dp"
+            android:text="Runs"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingTop="18dp"
+            android:text="Hits"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingTop="18dp"
+            android:text="Doubles"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingTop="18dp"
+            android:text="Singles"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/team_spinnerH"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="81dp">
+
+        <TextView
+            android:id="@+id/quantity_run_viewH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/quantity_Thits_viewH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="5dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"/>
+        <TextView
+            android:id="@+id/quantity_hits_viewH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="25dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/quantity_error_viewH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:paddingLeft="18dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/increment_hitsH"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:onClick="incrementRunsH"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/increment_runsH"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="54dp"
+            android:layout_toEndOf="@+id/increment_hitsH"
+            android:onClick="incrementHitsH"
+            android:paddingLeft="18dp"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/increment_errorsH"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:layout_toEndOf="@+id/increment_runsH"
+            android:onClick="incrementErrorsH"
+            android:text="+" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/team_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="81dp">
+
+        <TextView
+            android:id="@+id/quantity_run_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/quantity_Thits_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="5dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"/>
+        <TextView
+            android:id="@+id/quantity_hits_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="25dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/quantity_error_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:paddingLeft="18dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/increment_runs"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:onClick="incrementRuns"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/increment_hits"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="54dp"
+            android:layout_toEndOf="@+id/increment_runs"
+            android:onClick="incrementHits"
+            android:paddingLeft="18dp"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/increment_errors"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:layout_toEndOf="@+id/increment_hits"
+            android:onClick="incrementErrors"
+            android:text="+" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/baseball" />
+        <Button
+            android:id="@+id/winner"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="bottom"
+            android:onClick="winner"
+            android:text="Who won?" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/winner"
+            android:onClick="resetScore"
+            android:text="reset"
+            android:textSize="16dp"
+            android:id="@+id/reset" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The winner is:"
+            android:layout_below="@+id/winner"
+            android:textSize="36dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/whoWon" />
+
+        <TextView
+            android:id="@+id/Metz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/whoWon"
+            android:textSize="45sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:text="NYM"/>
+
+
+
+    </RelativeLayout>
+</LinearLayout>
